@@ -29,7 +29,10 @@ class LeeCode_SwiftTests: XCTestCase {
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
-            // Put the code you want to measure the time of here.
+            
+            let fourSum : FourSum = FourSum();
+            print(fourSum.fourSum([-2,-3,-1,0,0,-1,1,2,3,3,5,-6,-5,8,7,-4,3,-9,-5], 0));
+            
         }
     }
     

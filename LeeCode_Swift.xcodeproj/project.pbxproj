@@ -17,6 +17,8 @@
 		8473D38A1F2F1007007F92B4 /* ContainsDuplicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473D3891F2F1007007F92B4 /* ContainsDuplicate.swift */; };
 		8473D38C1F2F1638007F92B4 /* ContainsDuplicateII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473D38B1F2F1638007F92B4 /* ContainsDuplicateII.swift */; };
 		8473D38E1F2F1EFB007F92B4 /* FourSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473D38D1F2F1EFB007F92B4 /* FourSum.swift */; };
+		8474AB1A1F301B180031EBA3 /* GasStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB191F301B180031EBA3 /* GasStation.swift */; };
+		8474AB1C1F3049940031EBA3 /* Heater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB1B1F3049940031EBA3 /* Heater.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		8473D3891F2F1007007F92B4 /* ContainsDuplicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainsDuplicate.swift; sourceTree = "<group>"; };
 		8473D38B1F2F1638007F92B4 /* ContainsDuplicateII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainsDuplicateII.swift; sourceTree = "<group>"; };
 		8473D38D1F2F1EFB007F92B4 /* FourSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourSum.swift; sourceTree = "<group>"; };
+		8474AB191F301B180031EBA3 /* GasStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasStation.swift; sourceTree = "<group>"; };
+		8474AB1B1F3049940031EBA3 /* Heater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heater.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 				8473D3891F2F1007007F92B4 /* ContainsDuplicate.swift */,
 				8473D38B1F2F1638007F92B4 /* ContainsDuplicateII.swift */,
 				8473D38D1F2F1EFB007F92B4 /* FourSum.swift */,
+				8474AB191F301B180031EBA3 /* GasStation.swift */,
+				8474AB1B1F3049940031EBA3 /* Heater.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -276,7 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8474AB1A1F301B180031EBA3 /* GasStation.swift in Sources */,
 				8473D38C1F2F1638007F92B4 /* ContainsDuplicateII.swift in Sources */,
+				8474AB1C1F3049940031EBA3 /* Heater.swift in Sources */,
 				8473D38A1F2F1007007F92B4 /* ContainsDuplicate.swift in Sources */,
 				8473D38E1F2F1EFB007F92B4 /* FourSum.swift in Sources */,
 				8473D35E1F2F0F34007F92B4 /* ViewController.swift in Sources */,
