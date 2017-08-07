@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        /********************************* Array *********************************/
+        
         let test : Array = [1,2,3,4,5,3,4];
         let testSet : Set = Set(test);
         print("集合可以剔除相同元素--\(testSet)");
@@ -27,7 +29,35 @@ class ViewController: UIViewController {
         //加热器
         let heater = Heater();
         print("heater--\(heater.findRadius([1,2,3,4,5,6,7], [3]))");
-        
+        //求两个数组的交集
+        let intersection = IntersectionOfTwoArr();
+        print("intersectionOfTwoArr--\(intersection.intersectionTwoArr([1,2,2,3,4,3], [2,3,3]))");
+        print("数组交集--\(intersection.intersection([1,1,3,3,4], [1,3,3,3]))");
+        //求两个数组交集
+        let intersectionII = IntersectionOfTwoArrII();
+        print("intersectionII--\(intersectionII.intersection([1,1,2,2,3], [1,1,3,4]))");
+        //求周长
+        let islandPerimeter = IslandPerimeter();
+        print("islandPerimeter--\(islandPerimeter.islandPerimeter([[1,1,0,0],[1,0,0,0],[0,0,1,1],[0,1,0,1]]))");
+        //求数组中最长连续元素长度
+        let longestTool = LongestConsecutiveSequence();
+        print("longestConsecutive--\(longestTool.longestConsecutive([100,2,3,4,6,8,9,10,11,5]))");
+        //求数组中大部分元素
+        let majority = MajorityElement();
+        print("majorityElement--\(majority.findMajorityElement([1,2,2,3,4,3,3]))");
+        //求数组中出现次数大于数组个数三分之一的元素
+        let majorityII = MajorityElementII();
+        print("majorityElementII--\(majorityII.findMajorityII([1,2,3,4,3,4,3,4,5,4]))");
+        //求出数组中相同元素最大长度
+        let maxConsecutive = MaxConsecutiveOnes();
+        print("maxConsecutive--\(maxConsecutive.maxConsecutive([1,1,1,1,0,0,1,1,1]))");
+        //求数组中子数组和为k的最大数组的长度
+        let maxSizeSubArrSumEqualK = MaximumSizeSubarraySumEqualsK();
+        print("maxSize--\(maxSizeSubArrSumEqualK.maxSubArrayLen([-2,-1,-2,1,0], -2))");
+        //把数组中的0全部移到数组最后边
+        let moveZeroesTool = MoveZeroes();
+        var testArr = [0,1,4,0,1,5,2,0,1];
+        print("moveZero--\(moveZeroesTool.moveZeroes(&testArr))");
     }
 
     override func didReceiveMemoryWarning() {
