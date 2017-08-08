@@ -58,6 +58,13 @@ class ViewController: UIViewController {
         let moveZeroesTool = MoveZeroes();
         var testArr = [0,1,4,0,1,5,2,0,1];
         print("moveZero--\(moveZeroesTool.moveZeroes(&testArr))");
+        //求数组中的下一个全排列
+        let permutationTool = NextPermutation();
+        var permutationArr = [3,2,4];
+        permutationTool.nextPermutation(&permutationArr);
+        print("nextPermutation--\(permutationArr)");
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

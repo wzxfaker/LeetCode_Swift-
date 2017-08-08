@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1709413B1F39F50200B0C080 /* NextPermutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709413A1F39F50200B0C080 /* NextPermutation.swift */; };
 		842D84941F37FA1000095991 /* MaxConsecutiveOnes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D84931F37FA1000095991 /* MaxConsecutiveOnes.swift */; };
 		842D84961F3812B000095991 /* MaximumSizeSubarraySumEqualsK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D84951F3812B000095991 /* MaximumSizeSubarraySumEqualsK.swift */; };
 		842D84981F3832C400095991 /* MoveZeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D84971F3832C400095991 /* MoveZeroes.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1709413A1F39F50200B0C080 /* NextPermutation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextPermutation.swift; sourceTree = "<group>"; };
 		842D84931F37FA1000095991 /* MaxConsecutiveOnes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxConsecutiveOnes.swift; sourceTree = "<group>"; };
 		842D84951F3812B000095991 /* MaximumSizeSubarraySumEqualsK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaximumSizeSubarraySumEqualsK.swift; sourceTree = "<group>"; };
 		842D84971F3832C400095991 /* MoveZeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveZeroes.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				842D84931F37FA1000095991 /* MaxConsecutiveOnes.swift */,
 				842D84951F3812B000095991 /* MaximumSizeSubarraySumEqualsK.swift */,
 				842D84971F3832C400095991 /* MoveZeroes.swift */,
+				1709413A1F39F50200B0C080 /* NextPermutation.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				842D84961F3812B000095991 /* MaximumSizeSubarraySumEqualsK.swift in Sources */,
 				84AB8CAB1F31CA3F00728270 /* IslandPerimeter.swift in Sources */,
 				842D84941F37FA1000095991 /* MaxConsecutiveOnes.swift in Sources */,
+				1709413B1F39F50200B0C080 /* NextPermutation.swift in Sources */,
 				8473D35C1F2F0F34007F92B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
