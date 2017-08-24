@@ -8,6 +8,12 @@
 
 import UIKit
 
+/**
+ * Question Link: https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/
+ * Primary idea: Use a dictionary to track the sum so far since the first until the current
+ * Time Complexity: O(n), Space Complexity: O(n)
+ */
+
 class MaximumSizeSubarraySumEqualsK: NSObject {
     func maxSubArrayLen(_ nums : [Int],_ k : Int) -> Int {
         var longest = 0,sum = 0;

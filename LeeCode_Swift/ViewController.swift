@@ -8,63 +8,59 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    
+    var typeArr = [String]();
+    var bundleName = String();//命名空间
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return typeArr.count;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "cellIndentifier";
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier);
+        if cell == nil {
+            cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: cellIdentifier);
+        }
+        cell?.textLabel?.text = typeArr[indexPath.row];
+        return cell!;
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true);
+        let className = String.init(format: "%@ViewController", typeArr[indexPath.row]);
+        let cls : AnyClass? = NSClassFromString(bundleName+"."+className);
+        // Swift中如果想通过一个Class来创建一个对象, 必须告诉系统这个Class的确切类型
+        guard let typeClass = cls as? UIViewController.Type else {
+            print("cls不能当做UIViewController类型");
+            return;
+        }
+        let vc = typeClass.init();
+        vc.title = typeArr[indexPath.row];
+        vc.view.backgroundColor = UIColor.white;
+        self.navigationController?.pushViewController(vc, animated: true);
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        /********************************* Array *********************************/
+        self.title = "LeetCode-Swift";
         
-        let test : Array = [1,2,3,4,5,3,4];
-        let testSet : Set = Set(test);
-        print("集合可以剔除相同元素--\(testSet)");
-        //一个数组中是否存在相同元素且下标差距在k以内
-        let containsII : ContainsDuplicateII = ContainsDuplicateII();
-        print("containsDuplicate--\(containsII.containsNearbyDuplication(nums: test, 2))");
-        //一个数组中是否存在四个数的和为target
-        let fourSum : FourSum = FourSum();
-        print("fourSum--\(fourSum.fourSum([-2,-3,-1,0,0,-1,1,2,3,3,5], 0))");
-        //汽车加气转圈
-        let gasStation = GasStation();
-        print("gasStation--\(gasStation.canCompleteCircular([1,2,3,4,5,6], [2,1,4,3,6,5]))");
-        //加热器
-        let heater = Heater();
-        print("heater--\(heater.findRadius([1,2,3,4,5,6,7], [3]))");
-        //求两个数组的交集
-        let intersection = IntersectionOfTwoArr();
-        print("intersectionOfTwoArr--\(intersection.intersectionTwoArr([1,2,2,3,4,3], [2,3,3]))");
-        print("数组交集--\(intersection.intersection([1,1,3,3,4], [1,3,3,3]))");
-        //求两个数组交集
-        let intersectionII = IntersectionOfTwoArrII();
-        print("intersectionII--\(intersectionII.intersection([1,1,2,2,3], [1,1,3,4]))");
-        //求周长
-        let islandPerimeter = IslandPerimeter();
-        print("islandPerimeter--\(islandPerimeter.islandPerimeter([[1,1,0,0],[1,0,0,0],[0,0,1,1],[0,1,0,1]]))");
-        //求数组中最长连续元素长度
-        let longestTool = LongestConsecutiveSequence();
-        print("longestConsecutive--\(longestTool.longestConsecutive([100,2,3,4,6,8,9,10,11,5]))");
-        //求数组中大部分元素
-        let majority = MajorityElement();
-        print("majorityElement--\(majority.findMajorityElement([1,2,2,3,4,3,3]))");
-        //求数组中出现次数大于数组个数三分之一的元素
-        let majorityII = MajorityElementII();
-        print("majorityElementII--\(majorityII.findMajorityII([1,2,3,4,3,4,3,4,5,4]))");
-        //求出数组中相同元素最大长度
-        let maxConsecutive = MaxConsecutiveOnes();
-        print("maxConsecutive--\(maxConsecutive.maxConsecutive([1,1,1,1,0,0,1,1,1]))");
-        //求数组中子数组和为k的最大数组的长度
-        let maxSizeSubArrSumEqualK = MaximumSizeSubarraySumEqualsK();
-        print("maxSize--\(maxSizeSubArrSumEqualK.maxSubArrayLen([-2,-1,-2,1,0], -2))");
-        //把数组中的0全部移到数组最后边
-        let moveZeroesTool = MoveZeroes();
-        var testArr = [0,1,4,0,1,5,2,0,1];
-        print("moveZero--\(moveZeroesTool.moveZeroes(&testArr))");
-        //求数组中的下一个全排列
-        let permutationTool = NextPermutation();
-        var permutationArr = [3,2,4];
-        permutationTool.nextPermutation(&permutationArr);
-        print("nextPermutation--\(permutationArr)");
+        //swift中动态创建类时需要引入命名空间
+        guard let name = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String else {
+            print("获取命名空间失败");
+            return;
+        }
+        bundleName = name;
         
-        
+        //DP-动态规划,DFS-深度优先搜索
+        typeArr = ["Array","DP","DFS","List","Math","Search","Sort","Stack","String","Tree","UnionFind"];
+       
+        let tableView = UITableView.init(frame: view.bounds, style: UITableViewStyle.plain);
+        tableView.delegate = self;
+        tableView.dataSource = self;
+        view.addSubview(tableView);
     }
 
     override func didReceiveMemoryWarning() {
