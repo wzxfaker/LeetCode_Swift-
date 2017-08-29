@@ -68,6 +68,22 @@ class ArrayViewController: UIViewController {
         let pointArr = [[0,0],[1,0],[2,0],[0,1],[2,1]];
         let boomerangsTool = NumberOfBoomerangs();
         print("numberOfBoomerangs--\(boomerangsTool.numOfBoomeranga(pointArr))");
+        //求数组中除自己外其他项的乘积
+        let product = ProductExceptSelf();
+        let numsArr = [1,3,5,7];
+        print("productExceptSelf--\(product.productExceptSelf(nums: numsArr))");
+        //删除一个已排序数组中重复的元素并返回元素个数
+        let removeDuplicateTool = RemoveDuplicatesFromSortedArray();
+        var originalArr = [1,2,2,3,4,4,5];
+        print("排除数组中的相同项，而且不能开辟新的空间--\(removeDuplicateTool.removeDuplicates(nums: &originalArr))");
+        //翻转数组中从右边数k个数
+        let rotateArrTool = RotateArray();
+        var rotateOriArr = [1,2,3,4,5,6,7,8,9,10];
+        print("翻转数组中的元素--\(rotateArrTool.rotate(&rotateOriArr, 3))");
+        //rotateImage
+        let rotateImageTool = RotateImage();
+        var imageArr = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]];
+        print("翻转二维数组--\(rotateImageTool.rotate(&imageArr))");
     }
 
     override func didReceiveMemoryWarning() {
