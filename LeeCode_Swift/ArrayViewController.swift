@@ -84,6 +84,10 @@ class ArrayViewController: UIViewController {
         let rotateImageTool = RotateImage();
         var imageArr = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]];
         print("翻转二维数组--\(rotateImageTool.rotate(&imageArr))");
+        //shortestWordDistance
+        let shortestTool = ShortestWordDistance();
+        let wordsArr = ["two","one","three","four","one","five","two","three"];
+        print("单词最短距离--\(shortestTool.shortestDistance(wordsArr,"one","three"))");
     }
 
     override func didReceiveMemoryWarning() {

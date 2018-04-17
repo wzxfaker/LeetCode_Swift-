@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1709413B1F39F50200B0C080 /* NextPermutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709413A1F39F50200B0C080 /* NextPermutation.swift */; };
+		8412B0991FA2D9DB002B0DA4 /* ShortestWordDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412B0981FA2D9DB002B0DA4 /* ShortestWordDistance.swift */; };
+		8412B09B1FA2D9E9002B0DA4 /* ShortestWordDistanceII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412B09A1FA2D9E9002B0DA4 /* ShortestWordDistanceII.swift */; };
+		8412B09D1FA2D9F3002B0DA4 /* ShortestWordDistanceIII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412B09C1FA2D9F3002B0DA4 /* ShortestWordDistanceIII.swift */; };
 		842D84941F37FA1000095991 /* MaxConsecutiveOnes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D84931F37FA1000095991 /* MaxConsecutiveOnes.swift */; };
 		842D84961F3812B000095991 /* MaximumSizeSubarraySumEqualsK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D84951F3812B000095991 /* MaximumSizeSubarraySumEqualsK.swift */; };
 		842D84981F3832C400095991 /* MoveZeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D84971F3832C400095991 /* MoveZeroes.swift */; };
@@ -56,6 +59,9 @@
 
 /* Begin PBXFileReference section */
 		1709413A1F39F50200B0C080 /* NextPermutation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextPermutation.swift; sourceTree = "<group>"; };
+		8412B0981FA2D9DB002B0DA4 /* ShortestWordDistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortestWordDistance.swift; sourceTree = "<group>"; };
+		8412B09A1FA2D9E9002B0DA4 /* ShortestWordDistanceII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortestWordDistanceII.swift; sourceTree = "<group>"; };
+		8412B09C1FA2D9F3002B0DA4 /* ShortestWordDistanceIII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortestWordDistanceIII.swift; sourceTree = "<group>"; };
 		842D84931F37FA1000095991 /* MaxConsecutiveOnes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxConsecutiveOnes.swift; sourceTree = "<group>"; };
 		842D84951F3812B000095991 /* MaximumSizeSubarraySumEqualsK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaximumSizeSubarraySumEqualsK.swift; sourceTree = "<group>"; };
 		842D84971F3832C400095991 /* MoveZeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveZeroes.swift; sourceTree = "<group>"; };
@@ -210,6 +216,9 @@
 				848C8F551F552FF4007B6A78 /* RemoveDuplicatesFromSortedArray.swift */,
 				846B75F61F554E0F00F47CE8 /* RotateArray.swift */,
 				846B76031F555DF800F47CE8 /* RotateImage.swift */,
+				8412B0981FA2D9DB002B0DA4 /* ShortestWordDistance.swift */,
+				8412B09A1FA2D9E9002B0DA4 /* ShortestWordDistanceII.swift */,
+				8412B09C1FA2D9F3002B0DA4 /* ShortestWordDistanceIII.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -352,6 +361,7 @@
 				TargetAttributes = {
 					8473D3571F2F0F34007F92B4 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8NDM2JAGC4;
 						ProvisioningStyle = Automatic;
 					};
 					8473D36B1F2F0F34007F92B4 = {
@@ -418,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8412B0991FA2D9DB002B0DA4 /* ShortestWordDistance.swift in Sources */,
 				84AB8CAD1F31D20500728270 /* LongestConsecutiveSequence.swift in Sources */,
 				84AB8C9D1F31BD7F00728270 /* IntersectionOfTwoArr.swift in Sources */,
 				8474AB1A1F301B180031EBA3 /* GasStation.swift in Sources */,
@@ -430,6 +441,7 @@
 				846B76041F555DF800F47CE8 /* RotateImage.swift in Sources */,
 				84AB8C9F1F31C3B300728270 /* IntersectionOfTwoArrII.swift in Sources */,
 				8473D38A1F2F1007007F92B4 /* ContainsDuplicate.swift in Sources */,
+				8412B09B1FA2D9E9002B0DA4 /* ShortestWordDistanceII.swift in Sources */,
 				8473D38E1F2F1EFB007F92B4 /* FourSum.swift in Sources */,
 				842D84981F3832C400095991 /* MoveZeroes.swift in Sources */,
 				8473D35E1F2F0F34007F92B4 /* ViewController.swift in Sources */,
@@ -440,6 +452,7 @@
 				1709413B1F39F50200B0C080 /* NextPermutation.swift in Sources */,
 				843D7D611F4ECB6800338ED1 /* ArrayViewController.swift in Sources */,
 				848C8F541F5504E1007B6A78 /* ProductExceptSelf.swift in Sources */,
+				8412B09D1FA2D9F3002B0DA4 /* ShortestWordDistanceIII.swift in Sources */,
 				8473D35C1F2F0F34007F92B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,6 +603,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8NDM2JAGC4;
 				INFOPLIST_FILE = LeeCode_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gcg.LeeCode-Swift";
@@ -602,6 +616,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8NDM2JAGC4;
 				INFOPLIST_FILE = LeeCode_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gcg.LeeCode-Swift";

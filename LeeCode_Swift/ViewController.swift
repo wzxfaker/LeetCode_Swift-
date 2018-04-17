@@ -13,6 +13,25 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     var typeArr = [String]();
     var bundleName = String();//命名空间
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "LeetCode-Swift";
+        
+        //swift中动态创建类时需要引入命名空间
+        guard let name = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String else {
+            print("获取命名空间失败");
+            return;
+        }
+        bundleName = name;
+        
+        //DP-动态规划,DFS-深度优先搜索
+        typeArr = ["Array","DP","DFS","List","Math","Search","Sort","Stack","String","Tree","UnionFind"];
+       
+        let tableView = UITableView.init(frame: view.bounds, style: UITableViewStyle.plain);
+        tableView.delegate = self;
+        tableView.dataSource = self;
+        view.addSubview(tableView);
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return typeArr.count;
@@ -41,26 +60,6 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         vc.title = typeArr[indexPath.row];
         vc.view.backgroundColor = UIColor.white;
         self.navigationController?.pushViewController(vc, animated: true);
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = "LeetCode-Swift";
-        
-        //swift中动态创建类时需要引入命名空间
-        guard let name = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String else {
-            print("获取命名空间失败");
-            return;
-        }
-        bundleName = name;
-        
-        //DP-动态规划,DFS-深度优先搜索
-        typeArr = ["Array","DP","DFS","List","Math","Search","Sort","Stack","String","Tree","UnionFind"];
-       
-        let tableView = UITableView.init(frame: view.bounds, style: UITableViewStyle.plain);
-        tableView.delegate = self;
-        tableView.dataSource = self;
-        view.addSubview(tableView);
     }
 
     override func didReceiveMemoryWarning() {
